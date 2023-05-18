@@ -10,7 +10,6 @@
   --light-grey: #555353;
   --dark-grey: #1f1d1f;
   --dark: #1e1e1e;
-  --instagram-lg: linear-gradient(120deg, #e4405f, #f77737, #ffc837, #833ab4);
 }
 * {
   margin: 0;
@@ -62,6 +61,7 @@ footer > ul > .github > a:hover {
   color: var(--grey) !important;
 }
 footer > ul > .instagram > a:hover {
+  --instagram-lg: linear-gradient(120deg, #e4405f, #f77737, #ffc837, #833ab4);
   transition: 0.8s;
   background: var(--instagram-lg) !important;
   -webkit-text-fill-color: transparent !important;
@@ -77,8 +77,8 @@ a {
 /* Home style */
 .avatar {
   border-radius: 50%;
-  width: 55px;
-  height: 55px;
+  width: 65px;
+  height: 65px;
 }
 nav {
   display: flex;
@@ -86,10 +86,17 @@ nav {
   align-items: center;
   width: 100%;
   padding: 15px 10px;
+  margin-bottom: 0.5em;
 }
-.bi-brightness-high-fill {
+.change-theme {
   font-size: 1.4em;
   cursor: pointer;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  width: 36px;
+  height: 35px;
+  padding: 1px;
+  text-align: center;
 }
 .bi-list {
   font-size: 2em;
@@ -131,7 +138,7 @@ nav > ul > li > .no-decoration > button {
 nav > ul > li > a > button::before,
 nav > ul > li > a > button::after {
   content: "";
-  transition: 0.35s;
+  transition: 0.8s;
   width: 0px;
   height: 100%;
   position: absolute;
@@ -141,7 +148,6 @@ nav > ul > li > a > button::after {
 }
 nav > ul > li > a > button::before {
   left: 0;
-  transition-delay: 0.5s;
 }
 nav > ul > li > a > button::after {
   right: 0;
@@ -149,13 +155,12 @@ nav > ul > li > a > button::after {
 nav > ul > li > a > button:hover::before {
   width: 100%;
   background-color: #ffc837;
-  transition: 0.35s;
 }
 nav > ul > li > a > button:hover::after {
   width: 100%;
   background-color: var(--orange);
-  transition-delay: 0.35s;
 }
+/* David.html style */
 .intro {
   height: 100vh;
   width: 100%;
@@ -163,13 +168,13 @@ nav > ul > li > a > button:hover::after {
   grid-template-columns: repeat(2, 35%);
   place-content: center;
   place-items: center;
-  column-gap: 2em;
+  column-gap: 5em;
   padding: 2em 0 4em;
 }
 .self > h1 {
   font-size: 2.7em;
   margin-bottom: 1em;
-  font-weight: 500;
+  font-weight: 600;
   font-family: var(--font-light);
 }
 .self > p {
@@ -240,7 +245,7 @@ nav > ul > li > a > button:hover::after {
   padding-top: 5em;
   display: grid;
   place-content: center;
-  grid-template-columns: repeat(2, 29%);
+  grid-template-columns: repeat(2, 29.3%);
   column-gap: 3em;
   height: 100vh;
 }
@@ -254,8 +259,7 @@ nav > ul > li > a > button:hover::after {
   font-size: 1.2em;
   color: var(--grey);
   overflow-y: scroll;
-  padding: 0 5px 15px 0;
-  text-align: justify;
+  padding: 0 5px 5px 0;
 }
 .brief-history::-webkit-scrollbar {
   background: transparent !important;
@@ -268,6 +272,8 @@ nav > ul > li > a > button:hover::after {
 }
 .brief-history .pad-3 {
   padding-top: 2.5em;
+}
+.brief-history p {
   line-height: 1.7;
 }
 .brief-history > p > strong,
@@ -293,7 +299,7 @@ nav > ul > li > a > button:hover::after {
   position: relative;
   left: 50%;
   transition: 0.8s;
-  margin-bottom: 2em;
+  margin-bottom: 3em;
   margin-top: 2em;
   cursor: pointer;
 }
@@ -367,7 +373,7 @@ nav > ul > li > a > button:hover::after {
 .freeCodeCamp-logo > img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 .org-content {
   text-align: justify;
@@ -420,6 +426,8 @@ nav > ul > li > a > button:hover::after {
 #portfolio {
   padding: 0em 1em 0em;
   width: 100%;
+  display: grid;
+  place-items: center;
 }
 .project > h1 {
   font-size: 2.6em;
@@ -429,6 +437,7 @@ nav > ul > li > a > button:hover::after {
 .project {
   display: grid;
   place-content: center;
+  width: 90%;
   padding-bottom: 4em;
 }
 .project:nth-child(4) {
@@ -437,20 +446,18 @@ nav > ul > li > a > button:hover::after {
 .project-img {
   width: 100%;
   height: 100%;
-  display: grid;
-  place-items: center;
 }
 .project-img > img {
-  width: 90%;
+  width: 100%;
   height: 100%;
-  object-fit: center;
+  object-fit: contain;
+  border: 0;
   border-radius: 2px;
-  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.5);
 }
 .project-info {
   padding-top: 2em;
   width: 40rem;
-  padding-left: 4.5vw;
 }
 .project-info > h1 {
   font-family: var(--font-light);
@@ -511,9 +518,8 @@ input {
   caret-color: var(--grey);
   font-size: 1.05em;
   color: var(--white);
-  border: 2px solid #222222;
+  border: 2px solid #353535;
 }
-
 textarea {
   background-color: #222222;
   padding: 0.5em;
@@ -524,7 +530,7 @@ textarea {
   color: var(--white);
   caret-color: var(--grey);
   line-height: 1.6;
-  border: 2px solid #222222;
+  border: 2px solid #353535;
 }
 form > button {
   padding: 1.3em 2.5em;
@@ -562,8 +568,8 @@ form > button:hover::before {
   width: 100%;
   background-color: #ffc837;
 }
-
 /* Responsive style */
+/* Responsiveness for 1170px screen width */
 @media screen and (max-width: 1170px) {
   /* David style */
   .self > h1 {
@@ -573,6 +579,7 @@ form > button:hover::before {
   .meet-me {
     display: grid;
     grid-template-columns: 95%;
+    place-items: center;
     height: auto;
     row-gap: 1em;
   }
@@ -596,14 +603,14 @@ form > button:hover::before {
     display: block;
   }
   .meet-me > a > button {
-    left: 30%;
+    left: 0;
   }
   /* Contact style */
   .contact {
     gap: 8rem;
   }
 }
-
+/* Responsiveness for 995px screen width */
 @media screen and (max-width: 995px) {
   .intro {
     grid-template-columns: auto;
@@ -623,19 +630,14 @@ form > button:hover::before {
     display: grid;
     place-items: center;
   }
-  .self-img > img {
-    width: 85%;
-  }
   .contact {
     flex-direction: column;
     row-gap: 5em;
   }
 }
+/* Responsiveness for 840px screen width */
 @media screen and (max-width: 840px) {
   /* portfolio */
-  .project-img > img {
-    width: 100%;
-  }
   .project-info {
     padding-left: 0;
     width: 100%;
@@ -644,9 +646,12 @@ form > button:hover::before {
     padding-left: 0.3em;
   }
 }
-
+/* Responsiveness for 535px screen width */
 @media screen and (max-width: 535px) {
   /* David style */
+  .self > h1 {
+    font-weight: 400;
+  }
   .self > p {
     font-size: 1.18em;
   }
@@ -664,13 +669,19 @@ form > button:hover::before {
     width: 100%;
   }
   /* Project */
+  .project {
+    width: 100%;
+  }
+  .project-info > h1 {
+    font-size: 1.9em;
+  }
+  .project-info > a {
+    font-size: 1.4em;
+  }
   .project-info {
     font-size: 0.95em;
   }
   /* Navbar toggle */
-  nav {
-    align-items: start;
-  }
   nav > ul {
     flex-direction: column;
     align-items: start;
@@ -710,7 +721,6 @@ form > button:hover::before {
   }
   .meet-me > a > button {
     width: 200px;
-    left: 23%;
   }
   .brief-history .pad-3 {
     line-height: normal;
