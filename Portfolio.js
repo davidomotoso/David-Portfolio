@@ -118,18 +118,9 @@ const displayNav = () => {
   }
 };
 displayNav();
+
 // Dark and light mode feature for different HTML tags
-const anchor = (a) => {
-  for (let i = 0; i < a.length; i++) {
-    if (body.classList == "light") {
-      a[i].classList.add("dark");
-      a[i].classList.remove("light");
-    } else {
-      a[i].classList.remove("dark");
-      a[i].classList.add("light");
-    }
-  }
-};
+
 const buttons = (button) => {
   for (let i = 0; i < button.length; i++) {
     if (body.classList == "light") {
@@ -143,25 +134,15 @@ const buttons = (button) => {
     }
   }
 };
-const strongs = (strong) => {
-  for (let i = 0; i < strong.length; i++) {
+
+const basicChanges = (changes) => {
+  for (let i = 0; i < changes.length; i++) {
     if (body.classList == "light") {
-      strong[i].classList.add("dark");
-      strong[i].classList.remove("light");
+      changes[i].classList.add("dark");
+      changes[i].classList.remove("light");
     } else {
-      strong[i].classList.remove("dark");
-      strong[i].classList.add("light");
-    }
-  }
-};
-const inputs = (input) => {
-  for (let i = 0; i < input.length; i++) {
-    if (body.classList == "light") {
-      input[i].classList.add("dark");
-      input[i].classList.remove("light");
-    } else {
-      input[i].classList.remove("dark");
-      input[i].classList.add("light");
+      changes[i].classList.remove("dark");
+      changes[i].classList.add("light");
     }
   }
 };
@@ -190,10 +171,12 @@ function indicator(theme) {
     theme.classList.remove("bi-brightness-high-fill");
     theme.classList.add("bi-moon-stars-fill");
     theme.style.borderColor = "#1f1f1f";
+    theme.setAttribute("title", "Activate dark mode");
   } else {
     theme.classList.remove("bi-moon-stars-fill");
     theme.classList.add("bi-brightness-high-fill");
     theme.style.borderColor = "#fafafa";
+    theme.setAttribute("title", "Activate light mode");
   }
 }
 function myImg(img) {
@@ -216,6 +199,16 @@ function myImg(img) {
   }
 }
 
+function changefreecodecampSrc(freeCodeCamp) {
+  if (freeCodeCamp !== null) {
+    if (body.classList == "light") {
+      freeCodeCamp.src = "img/freeCodeCamp-logo.png";
+    } else {
+      freeCodeCamp.src = "img/Light mode freeCodeCamp logo.png";
+    }
+  }
+}
+
 // Dark and mode feature
 function local() {
   let a = document.querySelectorAll("a");
@@ -227,33 +220,89 @@ function local() {
   const selfImg = document.querySelector(".self-img>img");
   const changeTheme = document.querySelector(".change-theme");
   const freeCodeCamp = document.querySelector(".freeCodeCamp-logo>img");
-  anchor(a);
   buttons(button);
-  strongs(strong);
-  inputs(input);
+  basicChanges(a);
+  basicChanges(strong);
+  basicChanges(input);
   changeCancel(cancel);
   textarea(text);
   myImg(selfImg);
   indicator(changeTheme);
-  if (freeCodeCamp !== null) {
-    if (body.classList == "light") {
-      freeCodeCamp.src = "img/freeCodeCamp-logo.png";
-    } else {
-      freeCodeCamp.src = "img/Light mode freeCodeCamp logo.png";
-    }
-  }
+  changefreecodecampSrc(freeCodeCamp);
   if (body.classList == "light") {
     body.classList.remove("light");
     body.classList.add("dark");
-    changeTheme.setAttribute("title", "Dark mode");
     return localStorage.setItem("theme", "dark");
   } else {
     body.classList.remove("dark");
     body.classList.add("light");
-    changeTheme.setAttribute("title", "Light mode");
     return localStorage.setItem("theme", "light");
   }
 }
+
+const finalChanges = (changes) => {
+  for (let i = 0; i < changes.length; i++) {
+    if (body.classList == "light") {
+      changes[i].classList.add("light");
+      changes[i].classList.remove("dark");
+    } else {
+      changes[i].classList.remove("light");
+      changes[i].classList.add("dark");
+    }
+  }
+};
+
+const finalButton = (button) => {
+  for (let i = 0; i < button.length; i++) {
+    if (body.classList == "light") {
+      button[i].classList.add("light");
+      button[i].classList.remove("dark");
+      button[i].style.borderColor = "#1f1f1f";
+    } else {
+      button[i].classList.remove("light");
+      button[i].classList.add("dark");
+      button[i].style.borderColor = "#fafafa";
+    }
+  }
+};
+
+const finalfreecodecampSrc = (freeCodeCamp) => {
+  if (freeCodeCamp !== null) {
+    if (body.classList == "light") {
+      freeCodeCamp.src = "img/Light mode freeCodeCamp logo.png";
+    } else {
+      freeCodeCamp.src = "img/freeCodeCamp-logo.png";
+    }
+  }
+};
+
+const Theme = (theme) => {
+  if (body.classList == "light") {
+    theme.setAttribute("title", "Activate dark Mode");
+    theme.classList.remove("bi-brightness-high-fill");
+    theme.classList.add("bi-moon-stars-fill");
+    theme.style.borderColor = "#1f1f1f";
+  } else {
+    theme.setAttribute("title", "Activate light Mode");
+    theme.classList.remove("bi-moon-stars-fill");
+    theme.classList.add("bi-brightness-high-fill");
+    theme.style.borderColor = "#fafafa";
+  }
+};
+
+const textPath = (text) => {
+  if (text !== null) {
+    if (body.classList == "light") {
+      text.classList.add("light");
+      text.classList.remove("dark");
+    } else {
+      text.classList.add("dark");
+      text.classList.remove("light");
+    }
+  } else {
+    return;
+  }
+};
 
 // This function returns the mode(dark/light) of the website
 function finale() {
@@ -267,81 +316,23 @@ function finale() {
   const freeCodeCamp = document.querySelector(".freeCodeCamp-logo>img");
   body.classList.add(theme);
 
-  // anchor loop
-  for (let i = 0; i < anchor.length; i++) {
-    if (body.classList == "light") {
-      anchor[i].classList.add("light");
-      anchor[i].classList.remove("dark");
-    } else {
-      anchor[i].classList.remove("light");
-      anchor[i].classList.add("dark");
-    }
-  }
+  // anchor tags
+  finalChanges(anchor);
 
   // Change theme
-  if (body.classList == "light") {
-    changeTheme.setAttribute("title", "Light Mode");
-    changeTheme.classList.remove("bi-brightness-high-fill");
-    changeTheme.classList.add("bi-moon-stars-fill");
-    changeTheme.style.borderColor = "#1f1f1f";
-  } else {
-    changeTheme.setAttribute("title", "Dark Mode");
-    changeTheme.classList.remove("bi-moon-stars-fill");
-    changeTheme.classList.add("bi-brightness-high-fill");
-    changeTheme.style.borderColor = "#fafafa";
-  }
-  // button loop
-  for (let i = 0; i < button.length; i++) {
-    if (body.classList == "light") {
-      button[i].classList.add("light");
-      button[i].classList.remove("dark");
-      button[i].style.borderColor = "#1f1f1f";
-    } else {
-      button[i].classList.remove("light");
-      button[i].classList.add("dark");
-      button[i].style.borderColor = "#fafafa";
-    }
-  }
-  // input loop
-  for (let i = 0; i < input.length; i++) {
-    if (body.classList == "light") {
-      input[i].classList.remove("dark");
-      input[i].classList.add("light");
-    } else {
-      input[i].classList.add("dark");
-      input[i].classList.remove("light");
-    }
-  }
-  // strong loop
-  for (let i = 0; i < strong.length; i++) {
-    if (body.classList == "light") {
-      strong[i].classList.remove("dark");
-      strong[i].classList.add("light");
-    } else {
-      strong[i].classList.add("dark");
-      strong[i].classList.remove("light");
-    }
-  }
+  Theme(changeTheme);
+  // button tags
+  finalButton(button);
+  // input tags
+  finalChanges(input);
+
+  // strong tags
+  finalChanges(strong);
 
   // freeCodeCamp src change
-  if (freeCodeCamp !== null) {
-    if (body.classList == "light") {
-      freeCodeCamp.src = "img/Light mode freeCodeCamp logo.png";
-    } else {
-      freeCodeCamp.src = "img/freeCodeCamp-logo.png";
-    }
-  }
+  finalfreecodecampSrc(freeCodeCamp);
+
   // textarea
-  if (text !== null) {
-    if (body.classList == "light") {
-      text.classList.add("light");
-      text.classList.remove("dark");
-    } else {
-      text.classList.add("dark");
-      text.classList.remove("light");
-    }
-  } else {
-    return;
-  }
+  textPath(text);
 }
 finale();
