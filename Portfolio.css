@@ -161,14 +161,13 @@ footer > ul > .instagram > a:hover {
 /* David.html style */
 
 .intro {
-  height: 100vh;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 35%);
   place-content: center;
   place-items: center;
   column-gap: 5em;
-  padding: 2em 0 4em;
+  margin: 2em 0 4em;
 }
 .self > h1 {
   font-size: 2.7em;
@@ -184,10 +183,10 @@ footer > ul > .instagram > a:hover {
 }
 .self-img {
   height: 100%;
-  width: 100%;
+  width: 30em;
 }
 .self-img > img {
-  width: 30em;
+  width: 100%;
   height: 100%;
   object-fit: contain;
 }
@@ -241,6 +240,7 @@ footer > ul > .instagram > a:hover {
   padding: 0em 1em 0em;
   width: 100%;
   display: grid;
+  row-gap: 4em;
   place-items: center;
 }
 .project > h1 {
@@ -251,8 +251,8 @@ footer > ul > .instagram > a:hover {
 .project {
   display: grid;
   place-content: center;
+  row-gap: 2.5em;
   width: 90%;
-  padding-bottom: 4em;
 }
 .project:nth-child(4) {
   padding-bottom: 1em;
@@ -270,7 +270,6 @@ footer > ul > .instagram > a:hover {
   box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.5);
 }
 .project-info {
-  padding-top: 2em;
   width: 40rem;
 }
 .project-info > h1 {
@@ -680,7 +679,7 @@ form > button:hover::before {
   .self > p {
     font-size: 1.18em;
   }
-  .self-img > img {
+  .self-img {
     width: 100%;
   }
   .self > p {
