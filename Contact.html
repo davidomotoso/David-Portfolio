@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="Portfolio.css" />
     <link
@@ -10,99 +9,103 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
     />
     <link rel="shortcut icon" href="img/Avatar.png" type="image/x-icon" />
+
     <title>Contact David Omotoso</title>
   </head>
   <body>
     <!-- Navbar -->
     <nav></nav>
-    <div class="contact">
-      <div class="get-in-touch">
-        <h1>Get in touch</h1>
-        <p>By filling the contact form</p>
-        <p>
-          <span>Or:</span
-          ><a title="Mail" href="mailto:davidomotoso45@gmail.com">
-            davidomotoso45@gmail.com</a
-          >
-        </p>
-        <p>
-          <span>Or:</span
-          ><a
-            title="Twitter"
-            href="https://twitter.com/Erudite_David"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Twitter</a
-          >
-        </p>
-        <p>
-          <span>Or:</span
-          ><a title="Tel" href="tel:+234-902-775-0114"> +234-902-775-0114</a>
-        </p>
-      </div>
-      <form
-        action="https://formsubmit.co/davidomotoso45@gmail.com"
-        method="POST"
-        autocomplete="autocomplete"
-      >
-        <input type="hidden" name="_next" value="Contact.html" />
-        <input type="hidden" name="_subject" value="New submission!" />
-        <input type="hidden" name="_template" value="box" />
-        <input
-          type="hidden"
-          name="_autoresponse"
-          value="Thank you. David would get in touch with you soon"
-        />
-        <label for="name"
-          >Name
+    <!-- Main content -->
+    <main>
+      <div class="contact">
+        <div class="get-in-touch">
+          <h1>Get in touch</h1>
+          <p>By filling the contact form</p>
+          <p>
+            <span>Or:</span
+            ><a title="Mail" href="mailto:davidomotoso45@gmail.com">
+              davidomotoso45@gmail.com</a
+            >
+          </p>
+          <p>
+            <span>Or:</span
+            ><a
+              title="Twitter"
+              href="https://twitter.com/Erudite_David"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Twitter</a
+            >
+          </p>
+          <p>
+            <span>Or:</span
+            ><a title="Tel" href="tel:+234-902-775-0114"> +234-902-775-0114</a>
+          </p>
+        </div>
+        <form
+          action="https://formsubmit.co/davidomotoso45@gmail.com"
+          method="POST"
+          autocomplete="autocomplete"
+        >
+          <input type="hidden" name="_next" value="Contact.html" />
+          <input type="hidden" name="_subject" value="New submission!" />
+          <input type="hidden" name="_template" value="box" />
+          <input
+            type="hidden"
+            name="_autoresponse"
+            value="Thank you. David would get in touch with you soon"
+          />
+          <label for="name"
+            >Name
+            <input
+              type="text"
+              name="Username"
+              id="name"
+              name="Name"
+              placeholder="Your name"
+              required
+            />
+          </label>
+          <label for="email"
+            >Email
+            <input
+              type="email"
+              name="email"
+              id="email"
+              name="Email Address"
+              placeholder="john.doe@example.com"
+              autocomplete
+              required
+            />
+          </label>
+          <label for="subject">Subject</label>
           <input
             type="text"
-            name="Username"
-            id="name"
-            name="Name"
-            placeholder="Your name"
+            name="subject"
+            id="subject"
+            name="Subject"
+            placeholder="Subject"
             required
           />
-        </label>
-        <label for="email"
-          >Email
-          <input
-            type="email"
-            name="email"
-            id="email"
-            name="Email Address"
-            placeholder="john.doe@example.com"
-            autocomplete
-            required
-          />
-        </label>
-        <label for="subject">Subject</label>
-        <input
-          type="text"
-          name="subject"
-          id="subject"
-          name="Subject"
-          placeholder="Subject"
-          required
-        />
-        <label for="message"
-          >Message
-          <br />
-          <textarea
-            name="message"
-            id="message"
-            cols="50"
-            rows="10"
-            name="Message"
-            placeholder="A clear and concise message works wonders."
-            required
-          ></textarea>
-        </label>
-        <button type="submit" id="btn">Send Message</button>
-      </form>
-    </div>
-    <footer></footer>
+          <label for="message"
+            >Message
+            <br />
+            <textarea
+              name="message"
+              id="message"
+              cols="50"
+              rows="10"
+              name="Message"
+              placeholder="A clear and concise message works wonders."
+              required
+            ></textarea>
+          </label>
+          <button type="submit" id="btn">Send Message</button>
+        </form>
+      </div>
+      <footer></footer>
+    </main>
     <script src="Portfolio.js"></script>
   </body>
 </html>
