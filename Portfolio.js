@@ -3,7 +3,7 @@ const navBar = () => {
   let nav = document.querySelector("nav");
   nav.innerHTML = `
       <!-- Personal logo -->
-        <div>
+        <div style='border-radius:50%;width: 65px;height: 65px;'>
           <a href="David.html"><img src=img/Avatar.png alt=David-Avatar class=avatar /></a>
         </div>
       <!-- Navigation -->
