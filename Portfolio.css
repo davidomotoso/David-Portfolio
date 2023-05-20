@@ -664,13 +664,6 @@ form > button:hover::before {
 
 /* Responsiveness for 535px screen width */
 @media screen and (max-width: 535px) {
-  /* General style */
-  .avatar {
-    border-radius: 50%;
-    width: 70%;
-    height: 70%;
-    margin-top: -10px;
-  }
   /* David style */
   .self > h1 {
     font-weight: 400;
@@ -708,10 +701,17 @@ form > button:hover::before {
   nav {
     align-items: start;
   }
+  .avatar {
+    border-radius: 50%;
+    width: 70%;
+    height: 70%;
+  }
+  .change-theme {
+    margin-top: 10px;
+  }
   nav > ul {
     flex-direction: column;
     align-items: start;
-    /* background-color: #222222; */
     padding: 5px 5px 8px 15px;
     width: 50%;
     border-radius: 5px;

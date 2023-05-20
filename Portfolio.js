@@ -81,7 +81,29 @@ const displayNav = () => {
   let cancel = document.querySelector(".bi-x-lg");
   let ul = document.querySelector("ul");
   let nav = ul.parentElement;
-  window.addEventListener("resize", () => {
+  function resize() {
+    window.addEventListener("resize", () => {
+      if (window.innerWidth <= 535) {
+        menu.style.display = "block";
+        ul.style.display = "none";
+        menu.addEventListener("click", () => {
+          ul.style.display = "block";
+          cancel.style.display = "block";
+          menu.style.display = "none";
+          nav.appendChild(ul);
+        });
+        cancel.addEventListener("click", () => {
+          menu.style.display = "block";
+          cancel.style.display = "none";
+          ul.style.display = "none";
+        });
+      } else {
+        menu.style.display = "none";
+        ul.style.display = "flex";
+      }
+    });
+  }
+  function Default() {
     if (window.innerWidth <= 535) {
       menu.style.display = "block";
       ul.style.display = "none";
@@ -96,26 +118,10 @@ const displayNav = () => {
         cancel.style.display = "none";
         ul.style.display = "none";
       });
-    } else {
-      menu.style.display = "none";
-      ul.style.display = "flex";
     }
-  });
-  if (window.innerWidth <= 535) {
-    menu.style.display = "block";
-    ul.style.display = "none";
-    menu.addEventListener("click", () => {
-      ul.style.display = "block";
-      cancel.style.display = "block";
-      menu.style.display = "none";
-      nav.appendChild(ul);
-    });
-    cancel.addEventListener("click", () => {
-      menu.style.display = "block";
-      cancel.style.display = "none";
-      ul.style.display = "none";
-    });
   }
+  resize();
+  Default();
 };
 displayNav();
 
