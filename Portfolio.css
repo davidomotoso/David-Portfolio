@@ -8,7 +8,7 @@
   --font: "Anuphan", sans-serif;
   --font-light: "Open Sans", sans-serif;
   --light-grey: #555353;
-  --dark-grey: #1f1d1f;
+  --dark-grey: #161616;
   --dark: #1e1e1e;
 }
 * {
@@ -45,7 +45,6 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   padding: 15px 10px;
   margin-bottom: 1em;
 }
@@ -77,7 +76,7 @@ nav > ul li {
   padding-right: 25px;
 }
 nav > ul > li > a {
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 nav > ul > li > a:not(.no-decoration):hover {
   filter: blur(1px);
@@ -86,7 +85,7 @@ nav > ul > li > a:not(.no-decoration):hover {
 }
 nav > ul > li > .no-decoration > button {
   background-color: transparent !important;
-  padding: 10px;
+  padding: 12px 15px;
   color: var(--white);
   font-size: 17px;
   border: 2px solid var(--white);
@@ -129,11 +128,16 @@ footer {
   font-size: 1.05em;
   padding: 5em 1em 0.5em;
   column-gap: 1em;
+  width: 100%;
+}
+footer > img {
+  transform: scale(1.1);
 }
 footer > ul {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 1.5em;
+  column-gap: 1.5em;
   list-style: none;
 }
 footer > ul > li,
@@ -157,6 +161,15 @@ footer > ul > .instagram > a:hover {
   -webkit-background-clip: text !important;
   background-clip: text !important;
 }
+main {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+main > nav,
+main > footer {
+  width: 90%;
+}
 
 /* David.html style */
 
@@ -171,7 +184,8 @@ footer > ul > .instagram > a:hover {
 }
 .self > h1 {
   font-size: 2.7em;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
+  width: 12em;
   font-weight: 600;
   font-family: var(--font-light);
 }
@@ -197,7 +211,6 @@ footer > ul > .instagram > a:hover {
 .self > a > button {
   font-size: 1.3em;
   color: var(--white);
-  font-family: var(--font-light);
   height: 2.8em;
   width: 9em;
   background-color: transparent !important;
@@ -240,7 +253,7 @@ footer > ul > .instagram > a:hover {
   padding: 0em 1em 0em;
   width: 100%;
   display: grid;
-  row-gap: 4em;
+  row-gap: 12em;
   place-items: center;
 }
 .project > h1 {
@@ -250,7 +263,7 @@ footer > ul > .instagram > a:hover {
 .project {
   display: grid;
   place-content: center;
-  row-gap: 2.5em;
+  row-gap: 2em;
   width: 90%;
 }
 .project:nth-child(4) {
@@ -290,12 +303,23 @@ footer > ul > .instagram > a:hover {
 .project-info > a:hover .bi-arrow-right {
   padding-left: 0.5em;
 }
+.project:last-child > footer {
+  padding-left: 0;
+  padding-right: 0;
+}
 
 /* About style */
 
 .about-me {
   width: 100%;
   padding: 0 1em;
+  display: grid;
+  place-items: center;
+}
+.about-me > nav {
+  width: 71em;
+  padding-left: 0;
+  padding-right: 0;
 }
 .meet-me {
   margin-top: 5em;
@@ -310,7 +334,7 @@ footer > ul > .instagram > a:hover {
   display: flex;
   column-gap: 2em;
   justify-content: center;
-  height: 657px;
+  height: 640px;
   width: 100%;
 }
 .David-img {
@@ -402,35 +426,69 @@ footer > ul > .instagram > a:hover {
   display: grid;
   place-content: center;
   place-items: center;
+  margin-bottom: 2em;
 }
 .coding-tale > h1 {
   text-align: center;
   font-weight: 400;
+  font-size: 3em;
 }
-.journey {
-  display: grid;
-  place-items: center;
-  line-height: 1.5;
-  font-size: 1.2em;
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  font-size: 5em;
+  margin-top: 0.5em;
 }
-.journey > p {
-  padding-top: 1.6em;
-  width: 58em;
-  font-family: var(--font-light);
+svg {
+  width: 1em;
+  border-radius: 5px;
+}
+.stack > i:nth-child(1):hover {
+  color: var(--orange);
+  transition: 700ms;
+  cursor: pointer;
+}
+.stack > i:nth-child(2):hover {
+  --css-color: #38bdf8;
+  color: var(--css-color);
+  transition: 700ms;
+  cursor: pointer;
+}
+.stack > i:nth-child(3):hover {
+  --js-color: #ffca28;
+  color: var(--js-color);
+  transition: 700ms;
+  cursor: pointer;
+}
+.stack > svg:hover {
+  background-color: #0307d6d7;
+  transition: 700ms;
+  cursor: pointer;
 }
 .coding-org {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  row-gap: 7em;
   width: 100%;
+}
+.coding-org > h1 {
+  margin-top: 2.5em;
+  margin-bottom: -2.7em;
+  font-size: 3em;
+  font-weight: normal;
+  text-align: center;
 }
 .freeCodeCamp {
   height: 220px;
   width: 71em;
   display: flex;
   gap: 2em;
-  margin: 6em 0 2.5em;
+  margin-top: 6em;
 }
 .freeCodeCamp-logo {
   width: 100%;
@@ -442,10 +500,12 @@ footer > ul > .instagram > a:hover {
   object-fit: contain;
 }
 .org-content {
+  width: 300em;
   text-align: justify;
 }
 .org-content > h1 {
   margin-bottom: 10px;
+  font-weight: normal;
 }
 .org-content > h1 > a:hover,
 .Netninja > h1 > a:hover {
@@ -461,7 +521,6 @@ footer > ul > .instagram > a:hover {
   width: 71em;
   height: 220px;
   gap: 2em;
-  margin: 3.5em 0 3em;
 }
 .terra-logo {
   height: 100%;
@@ -473,8 +532,11 @@ footer > ul > .instagram > a:hover {
   object-fit: contain;
 }
 .Netninja {
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  width: 71em;
+  height: 220px;
+  gap: 2em;
   width: 71em;
   margin-bottom: 3em;
 }
@@ -487,32 +549,33 @@ footer > ul > .instagram > a:hover {
   font-family: var(--font-light);
   font-size: 1.2em;
 }
-
+.Netninja-logo {
+  height: 100%;
+  width: 100%;
+}
+.Netninja-logo > img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.coding-org > footer {
+  width: 71em;
+}
 /* Contact sytle */
 
 .contact {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  padding: 4em 1em;
+  padding: 2em 1em 4em;
+  padding-left: 10em;
   width: 100%;
-  gap: 15rem;
+  row-gap: 2rem;
 }
-.get-in-touch > h1 {
+.contact > h1 {
   font-weight: 100;
   font-size: 3.5em;
   padding-bottom: 0.3em;
-}
-.get-in-touch > p:first-of-type {
-  font-size: 1.15em;
-  padding-bottom: 2em;
-  font-family: var(--font-light);
-}
-.get-in-touch > p {
-  padding-bottom: 1.2em;
-  font-size: 1.2em;
-}
-.get-in-touch > p > span {
-  color: var(--grey);
 }
 form {
   height: 100%;
@@ -584,11 +647,20 @@ form > button:hover::before {
 /* Responsiveness for 1170px screen width */
 
 @media screen and (max-width: 1170px) {
+  .coding-org > footer {
+    width: 100%;
+  }
   /* David style */
   .self > h1 {
     font-size: 2em;
   }
   /* about style */
+  .about-me {
+    display: block;
+  }
+  .about-me > nav {
+    width: 100%;
+  }
   .david {
     flex-direction: column;
     align-items: center;
@@ -601,11 +673,9 @@ form > button:hover::before {
   .brief-history {
     width: 100%;
   }
-  .journey > p {
-    width: 100%;
-  }
   .freeCodeCamp-logo,
-  .terra-logo {
+  .terra-logo,
+  .Netninja-logo {
     display: none;
   }
   .freeCodeCamp,
@@ -614,17 +684,14 @@ form > button:hover::before {
     width: 100%;
     height: max-content;
   }
-  .Netninja {
-    display: block;
-  }
-  /* Contact style */
-  .contact {
-    gap: 8rem;
-  }
 }
 
 /* Responsiveness for 995px screen width */
 @media screen and (max-width: 995px) {
+  main > nav,
+  main > footer {
+    width: 100%;
+  }
   .intro {
     grid-template-columns: auto;
     height: auto;
@@ -636,16 +703,15 @@ form > button:hover::before {
     display: grid;
     place-items: center;
   }
+  .self > h1 {
+    width: 100%;
+  }
   .self > p {
     margin-bottom: 3em;
   }
   .self-img {
     display: grid;
     place-items: center;
-  }
-  .contact {
-    flex-direction: column;
-    row-gap: 5em;
   }
 }
 
@@ -659,14 +725,29 @@ form > button:hover::before {
   .name {
     padding-left: 0.3em;
   }
+  /* contact style */
+  .contact {
+    padding-left: 1em;
+  }
+  /* about style */
+  .org-content {
+    width: 100%;
+  }
+  footer > img {
+    transform: scale(1);
+  }
 }
 
-/* Responsiveness for 535px screen width */
-@media screen and (max-width: 535px) {
-  /* David style */
-  .self > h1 {
-    font-weight: 400;
+/* Responsiveness for 540px screen width */
+@media screen and (max-width: 540px) {
+  /* Contact style */
+  form {
+    width: 100%;
   }
+  input {
+    width: 100%;
+  }
+  /* David style */
   .self > p {
     font-size: 1.18em;
   }
@@ -676,14 +757,6 @@ form > button:hover::before {
   .self > p {
     text-align: justify;
   }
-  /* Contact style */
-  form {
-    width: 100%;
-  }
-  input {
-    width: 100%;
-  }
-  /* Project */
   .project {
     width: 100%;
   }
@@ -702,8 +775,8 @@ form > button:hover::before {
   }
   .avatar {
     border-radius: 50%;
-    width: 70%;
-    height: 70%;
+    width: 85%;
+    height: 85%;
   }
   .change-theme {
     margin-top: 10px;
@@ -722,8 +795,8 @@ form > button:hover::before {
   nav > ul > li:nth-of-type(2) {
     margin-top: 3em;
   }
-  nav > ul > li > a:not(.no-decoration) {
-    text-decoration: underline;
+  nav > ul > li > a {
+    font-size: 1.5em;
   }
   nav > ul > li > .no-decoration > button {
     margin: 0.8em 0 7px;
@@ -752,5 +825,16 @@ form > button:hover::before {
   }
   .brief-history .pad-3 {
     line-height: normal;
+  }
+  .coding-org > h1 {
+    font-size: 2.4em;
+    width: 100%;
+  }
+  .org-content > p {
+    font-size: 1.1em;
+  }
+  /* footer */
+  footer > ul {
+    column-gap: 1em;
   }
 }

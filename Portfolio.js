@@ -83,7 +83,7 @@ const displayNav = () => {
   let nav = ul.parentElement;
   function resize() {
     window.addEventListener("resize", () => {
-      if (window.innerWidth <= 535) {
+      if (window.innerWidth <= 540) {
         menu.style.display = "block";
         ul.style.display = "none";
         menu.addEventListener("click", () => {
@@ -104,7 +104,7 @@ const displayNav = () => {
     });
   }
   function Default() {
-    if (window.innerWidth <= 535) {
+    if (window.innerWidth <= 540) {
       menu.style.display = "block";
       ul.style.display = "none";
       menu.addEventListener("click", () => {
