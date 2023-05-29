@@ -1,4 +1,4 @@
-<div>
+    <div>
       <h1>David Omotoso Portfolio</h1>
       <p>
         This repository contains the HTML, CSS, and JavaScript code for my
@@ -24,6 +24,7 @@
         designed to engage visitors and provide a seamless user experience. The
         website was built using HTML, CSS, and JavaScript.
       </p>
+     
     </div>
     <div>
       <h1>Features</h1>
@@ -39,9 +40,9 @@
         </li>
         <li>Links to live demo sites for each project</li>
         <li>
-          An <span style="font-weight: 600">About me</span> page providing
-          information about David's background, coding skills, and the
-          institutions that have enhanced his coding abilities.
+          An About me page providing information about David's background,
+          coding skills, and the institutions that have enhanced his coding
+          abilities.
         </li>
         <li>Contact section with a call-to-action button to get in touch</li>
         <li>
@@ -51,6 +52,10 @@
         <li>
           When the form is submitted, the data is sent to the designated email
           address for further processing.
+        </li>
+        <li>
+          It also includes a light and dark mode feature, catering to the
+          preferences of all users.
         </li>
       </ul>
     </div>
@@ -83,6 +88,7 @@
       </p>
     </div>
     <div>
+      <h1>Contact</h1>
       <p>
         Thank you for visiting my portfolio! If you have any questions or would
         like to get in touch, please feel free to reach out.
