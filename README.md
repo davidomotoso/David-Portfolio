@@ -24,12 +24,7 @@
         designed to engage visitors and provide a seamless user experience. The
         website was built using HTML, CSS, and JavaScript.
       </p>
-      <div>
-        <h1>Here is a live demo of the website</h1>
-        <video autoplay loop>
-          <source src="Live Demo of David Omotoso Portfolio.mp4" />
-        </video>
-      </div>
+     
     </div>
     <div>
       <h1>Features</h1>
