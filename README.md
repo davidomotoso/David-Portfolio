@@ -26,8 +26,7 @@
   </p>
   <div>
     <h1>Here is a live demo of the website</h1>
-    <video autoplay loop>
-      <source src="Live Demo of David Omotoso Portfolio.mp4" />
+    <video src="Live Demo of David Omotoso Portfolio.mp4" autoplay loop>
     </video>
   </div>
 </div>
