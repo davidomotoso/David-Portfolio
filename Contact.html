@@ -23,7 +23,6 @@
         <form
           action="https://formsubmit.co/davidomotoso45@gmail.com"
           method="POST"
-          autocomplete="autocomplete"
         >
           <input type="hidden" name="_next" value="Contact.html" />
           <input type="hidden" name="_subject" value="New submission!" />
@@ -41,6 +40,7 @@
               id="name"
               name="Name"
               placeholder="Your name"
+              autocomplete="name"
               required
             />
           </label>
@@ -51,6 +51,7 @@
               name="email"
               id="email"
               name="Email Address"
+              autocomplete="email"
               placeholder="john.doe@example.com"
               autocomplete
               required
@@ -62,6 +63,7 @@
             name="subject"
             id="subject"
             name="Subject"
+            autocomplete="on"
             placeholder="Type your message title here"
             required
           />
@@ -74,6 +76,7 @@
               cols="50"
               rows="10"
               name="Message"
+              autocomplete="on"
               placeholder="Type your message here"
               required
             ></textarea>
