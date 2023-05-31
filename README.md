@@ -1,9 +1,9 @@
 <div>
   <h1>David Omotoso Portfolio</h1>
   <p>
-    This repository contains the HTML, CSS, and JavaScript code for my
-    personal portfolio website. The website showcases my skills, projects,
-    and contact information. Feel free to explore and get in touch!
+    This repository contains the HTML, CSS, and JavaScript code for my personal
+    portfolio website. The website showcases my skills, projects, and contact
+    information. Feel free to explore and get in touch!
   </p>
 </div>
 <div>
@@ -19,15 +19,18 @@
 <div>
   <h1>Description</h1>
   <p>
-    This website serves as my personal portfolio, providing an overview of
-    my experience, skills, and projects as a frontend engineer. It is
-    designed to engage visitors and provide a seamless user experience. The
-    website was built using HTML, CSS, and JavaScript.
+    This website serves as my personal portfolio, providing an overview of my
+    experience, skills, and projects as a frontend engineer. It is designed to
+    engage visitors and provide a seamless user experience. The website was
+    built using HTML, CSS, and JavaScript.
   </p>
   <div>
     <h1>Here is a live demo of the website</h1>
-    <video src="Live Demo of David Omotoso Portfolio.mp4" autoplay loop>
-    </video>
+    <img
+      src="img/Live Demo of David_Omotoso Portfolio.gif"
+      alt="Live demo of my project"
+      width="100%"
+    />
   </div>
 </div>
 <div>
@@ -44,14 +47,12 @@
     </li>
     <li>Links to live demo sites for each project</li>
     <li>
-      An About me page providing information about David's background,
-      coding skills, and the institutions that have enhanced his coding
-      abilities.
+      An About me page providing information about David's background, coding
+      skills, and the institutions that have enhanced his coding abilities.
     </li>
     <li>Contact section with a call-to-action button to get in touch</li>
     <li>
-      A contact form that the user's name, email address, subject, and
-      message.
+      A contact form that the user's name, email address, subject, and message.
     </li>
     <li>
       When the form is submitted, the data is sent to the designated email
@@ -67,11 +68,8 @@
   <h1>Installation</h1>
   <ol>
     <li>
-      Clone the repository to your local machine using the following
-      command:
-      <pre>
-      <code>https://github.com/davidomotoso/David-Portfolio.git</code>
-      </pre>
+      Clone the repository to your local machine using the following command:
+      <pre>https://github.com/davidomotoso/David-Portfolio.git</pre>
     </li>
     <li>Open the HTML file (David.html) in your preferred web browser.</li>
   </ol>
@@ -79,24 +77,24 @@
 <div>
   <h1>Usage</h1>
   <p>
-    Feel free to explore the website and navigate through different sections
-    to learn more about my skills and projects. Click on the project links
-    to visit the live demo sites and interact with them.
+    Feel free to explore the website and navigate through different sections to
+    learn more about my skills and projects. Click on the project links to visit
+    the live demo sites and interact with them.
   </p>
 </div>
 <div>
   <h1>Contributing</h1>
   <p>
-    Contributions are welcome! If you find any issues or have suggestions
-    for improvements, please open an issue or submit a pull request. Let's
-    make this portfolio even better together!
+    Contributions are welcome! If you find any issues or have suggestions for
+    improvements, please open an issue or submit a pull request. Let's make this
+    portfolio even better together!
   </p>
 </div>
 <div>
   <h1>Contact</h1>
   <p>
-    Thank you for visiting my portfolio! If you have any questions or would
-    like to get in touch, please feel free to reach out.
+    Thank you for visiting my portfolio! If you have any questions or would like
+    to get in touch, please feel free to reach out.
   </p>
   <div align="center">
     <img src="img/David.png" alt="David" title="David" />
