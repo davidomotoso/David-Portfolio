@@ -69,7 +69,7 @@
     <li>
       Clone the repository to your local machine using the following
       command:
-      <pre><pre>Git</pre>
+      <pre>
       <code>https://github.com/davidomotoso/David-Portfolio.git</code>
       </pre>
     </li>
