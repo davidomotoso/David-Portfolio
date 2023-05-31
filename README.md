@@ -69,8 +69,9 @@
     <li>
       Clone the repository to your local machine using the following
       command:
-      <pre>Git</pre>
+      <pre>Git
       <code>https://github.com/davidomotoso/David-Portfolio.git</code>
+      </pre>
     </li>
     <li>Open the HTML file (David.html) in your preferred web browser.</li>
   </ol>
