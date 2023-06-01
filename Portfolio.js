@@ -235,7 +235,11 @@ function local() {
   myImg(selfImg);
   indicator(changeTheme);
   changefreecodecampSrc(freeCodeCamp);
-  if (body.classList == "light") {
+
+  if (body.classList == "null") {
+    body.classList.add("light");
+    body.classList.remove("null");
+  } else if (body.classList == "light") {
     body.classList.remove("light");
     body.classList.add("dark");
     return localStorage.setItem("theme", "dark");
@@ -245,7 +249,6 @@ function local() {
     return localStorage.setItem("theme", "light");
   }
 }
-
 const finalChanges = (changes) => {
   for (let i = 0; i < changes.length; i++) {
     if (body.classList == "light") {
