@@ -4,7 +4,7 @@ const navBar = () => {
   nav.innerHTML = `
       <!-- Personal logo -->
         <div style='border-radius:50%;width: 65px;height: 65px;'>
-          <a href="David.html"><img src=img/Avatar.png alt=David-Avatar class=avatar /></a>
+          <a href="index.html"><img src=img/Avatar.png alt=David-Avatar class=avatar /></a>
         </div>
       <!-- Navigation -->
       <i title="Dark mode" class="bi bi-brightness-high-fill change-theme" onclick=local() ></i>
@@ -14,11 +14,11 @@ const navBar = () => {
         <i class="bi bi-x-lg"></i>
       </li>
         <li>
-          <a href="David.html"> Home</a>
+          <a href="index.html"> Home</a>
         </li>
         <li><a href="about.html">About </a></li>
         <li>
-          <a href="David.html#portfolio"> Portfolio</a>
+          <a href="index.html#portfolio"> Portfolio</a>
         </li>
         <li>
           <a href="Contact.html" class="no-decoration">
