@@ -71,7 +71,7 @@
       Clone the repository to your local machine using the following command:
       <pre>https://github.com/davidomotoso/David-Portfolio.git</pre>
     </li>
-    <li>Open the HTML file (David.html) in your preferred web browser.</li>
+    <li>Open the HTML file (index.html) in your preferred web browser.</li>
   </ol>
 </div>
 <div>
