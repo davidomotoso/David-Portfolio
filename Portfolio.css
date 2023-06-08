@@ -672,7 +672,7 @@ form > button:hover::before {
 .formSubmit .successful {
   border: 2px solid;
   padding: 1em;
-  width: 400px;
+  width: 430px;
   border-radius: 10px;
   text-align: center;
   display: flex;
