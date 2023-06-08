@@ -358,17 +358,19 @@ finale();
 
 const emailVal = () => {
   const btn = document.getElementById("btn");
-  btn.addEventListener("click", () => {
-    const email = document.getElementById("email");
-    // storing the users email in the localStorage
-    localStorage.setItem("Email", email.value);
-  });
+  if (btn !== null) {
+    btn.addEventListener("click", () => {
+      const email = document.getElementById("email");
+      // storing the users email in the localStorage
+      localStorage.setItem("Email", email.value);
+    });
+  }
 };
 emailVal();
 const returnEmail = () => {
   // returning the email into the html structure
   const email = localStorage.getItem("Email");
-  const success = document.querySelector(".successful .email");
-  success.textContent = `A confirmation message would be sent at ${email}`;
+  const successEml = document.querySelector(".email");
+  successEml.textContent = `A confirmation message would be sent at ${email}`;
 };
 returnEmail();
