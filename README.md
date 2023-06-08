@@ -70,7 +70,9 @@
   <ol>
     <li>
       Clone the repository to your local machine using the following command:
-      <pre>https://github.com/davidomotoso/David-Portfolio.git</pre>
+      ```
+      https://github.com/davidomotoso/David-Portfolio.git
+      ```
     </li>
     <li>Open the HTML file (index.html) in your preferred web browser.</li>
   </ol>
