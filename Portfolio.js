@@ -362,17 +362,21 @@ const emailVal = () => {
     btn.addEventListener("click", () => {
       const email = document.getElementById("email");
       // storing the users email in the localStorage
-      localStorage.setItem("Email", email.value);
+      sessionStorage.setItem("Email", email.value);
     });
+  } else {
+    return;
   }
 };
 emailVal();
 const returnEmail = () => {
   // returning the email into the html structure
-  const email = localStorage.getItem("Email");
+  const email = sessionStorage.getItem("Email");
   const successEml = document.querySelector(".email");
   if (successEml !== null) {
     successEml.textContent = `A confirmation message would be sent at ${email}`;
+  } else {
+    return;
   }
 };
 returnEmail();
