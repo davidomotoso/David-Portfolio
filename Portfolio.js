@@ -364,9 +364,11 @@ const emailVal = () => {
     localStorage.setItem("Email", email.value);
   });
 };
+emailVal();
 const returnEmail = () => {
   // returning the email into the html structure
   const email = localStorage.getItem("Email");
   const success = document.querySelector(".successful .email");
   success.textContent = `A confirmation message would be sent at ${email}`;
 };
+returnEmail();
