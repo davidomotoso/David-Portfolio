@@ -58,6 +58,7 @@
       When the form is submitted, the data is sent to the designated email
       address for further processing.
     </li>
+    <li>Once the form has been successfully submitted, a page is loaded to notify the user of the successful completion.</li>
     <li>
       It also includes a light and dark mode feature, catering to the
       preferences of all users.

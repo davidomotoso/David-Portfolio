@@ -1,77 +1,81 @@
 // creating a navbar.
 const navBar = () => {
   let nav = document.querySelector("nav");
-  nav.innerHTML = `
-      <!-- Personal logo -->
-        <div style='border-radius:50%;width: 65px;height: 65px;'>
-          <a href="index.html"><img src=img/Avatar.png alt=David-Avatar class=avatar /></a>
-        </div>
-      <!-- Navigation -->
-      <i title="Dark mode" class="bi bi-brightness-high-fill change-theme" onclick=local() ></i>
-      <i class="bi bi-list"></i>
-      <ul>
-      <li>
-        <i class="bi bi-x-lg"></i>
-      </li>
-        <li>
-          <a href="index.html"> Home</a>
-        </li>
-        <li><a href="about.html">About </a></li>
-        <li>
-          <a href="index.html#portfolio"> Portfolio</a>
-        </li>
-        <li>
-          <a href="Contact.html" class="no-decoration">
-            <button type="submit">Get in touch</button>
-          </a>
-        </li>
-      </ul>`;
+  if (nav !== null) {
+    nav.innerHTML = `
+  <!-- Personal logo -->
+    <div style='border-radius:50%;width: 65px;height: 65px;'>
+      <a href="index.html"><img src=img/Avatar.png alt=David-Avatar class=avatar /></a>
+    </div>
+  <!-- Navigation -->
+  <i title="Dark mode" class="bi bi-brightness-high-fill change-theme" onclick=local() ></i>
+  <i class="bi bi-list"></i>
+  <ul>
+  <li>
+    <i class="bi bi-x-lg"></i>
+  </li>
+    <li>
+      <a href="index.html"> Home</a>
+    </li>
+    <li><a href="about.html">About </a></li>
+    <li>
+      <a href="index.html#portfolio"> Portfolio</a>
+    </li>
+    <li>
+      <a href="Contact.html" class="no-decoration">
+        <button type="submit">Get in touch</button>
+      </a>
+    </li>
+  </ul>`;
+  }
 };
 navBar();
 
 // Footer
 const footer = () => {
   let footer = document.querySelector("footer");
-  footer.innerHTML = `
-  <img src=img/Avatar.png alt=David-Avatar style='border-radius: 50%;width: 52px;height: 52px;' />
-  <ul>
-    <li class="mail">
-      <a 
-      title=Mail 
-      href="mailto:davidomotoso45@gmail.com" 
-      rel="noopener">Mail</a>
-    </li>
-    <li class="twitter">
-      <a
-      title=Twitter
-        target="_blank"
-        href="https://twitter.com/Erudite_David"
-        rel="noopener"
-        >Twitter</a
-      >
-    </li>
-    <li class="github">
-      <a
-      title=Github
-        target="_blank"
-        href="https://github.com/davidomotoso"
-        rel="noopener"
-        >Github</a
-      >
-    </li>
-    <li class="instagram">
-      <a
-      title=Instagram
-        target="_blank"
-        href="https://www.instagram.com/daveomotoso_/"
-        rel="noopener"
-        >Instagram</a
-      >
-    </li>
-  </ul>
-  <p>2023 all rights reserved</p>
-</div>`;
+  if (footer !== null) {
+    footer.innerHTML = `
+    <img src=img/Avatar.png alt=David-Avatar style='border-radius: 50%;width: 52px;height: 52px;' />
+    <ul>
+      <li class="mail">
+        <a 
+        title=Mail 
+        href="mailto:davidomotoso45@gmail.com" 
+        rel="noopener">Mail</a>
+      </li>
+      <li class="twitter">
+        <a
+        title=Twitter
+          target="_blank"
+          href="https://twitter.com/Erudite_David"
+          rel="noopener"
+          >Twitter</a
+        >
+      </li>
+      <li class="github">
+        <a
+        title=Github
+          target="_blank"
+          href="https://github.com/davidomotoso"
+          rel="noopener"
+          >Github</a
+        >
+      </li>
+      <li class="instagram">
+        <a
+        title=Instagram
+          target="_blank"
+          href="https://www.instagram.com/daveomotoso_/"
+          rel="noopener"
+          >Instagram</a
+        >
+      </li>
+    </ul>
+    <p>2023 all rights reserved</p>`;
+  }
 };
+
 footer();
 
 const body = document.body;
@@ -80,9 +84,31 @@ const displayNav = () => {
   let menu = document.querySelector(".bi-list");
   let cancel = document.querySelector(".bi-x-lg");
   let ul = document.querySelector("ul");
-  let nav = ul.parentElement;
-  function resize() {
-    window.addEventListener("resize", () => {
+  if (ul !== null) {
+    let nav = ul.parentElement;
+    function resize() {
+      window.addEventListener("resize", () => {
+        if (window.innerWidth <= 540) {
+          menu.style.display = "block";
+          ul.style.display = "none";
+          menu.addEventListener("click", () => {
+            ul.style.display = "block";
+            cancel.style.display = "block";
+            menu.style.display = "none";
+            nav.appendChild(ul);
+          });
+          cancel.addEventListener("click", () => {
+            menu.style.display = "block";
+            cancel.style.display = "none";
+            ul.style.display = "none";
+          });
+        } else {
+          menu.style.display = "none";
+          ul.style.display = "flex";
+        }
+      });
+    }
+    function Default() {
       if (window.innerWidth <= 540) {
         menu.style.display = "block";
         ul.style.display = "none";
@@ -97,31 +123,13 @@ const displayNav = () => {
           cancel.style.display = "none";
           ul.style.display = "none";
         });
-      } else {
-        menu.style.display = "none";
-        ul.style.display = "flex";
       }
-    });
-  }
-  function Default() {
-    if (window.innerWidth <= 540) {
-      menu.style.display = "block";
-      ul.style.display = "none";
-      menu.addEventListener("click", () => {
-        ul.style.display = "block";
-        cancel.style.display = "block";
-        menu.style.display = "none";
-        nav.appendChild(ul);
-      });
-      cancel.addEventListener("click", () => {
-        menu.style.display = "block";
-        cancel.style.display = "none";
-        ul.style.display = "none";
-      });
     }
+    resize();
+    Default();
+  } else {
+    return;
   }
-  resize();
-  Default();
 };
 displayNav();
 
@@ -286,16 +294,18 @@ const finalfreecodecampSrc = (freeCodeCamp) => {
 };
 
 const Theme = (theme) => {
-  if (body.classList == "light") {
-    theme.setAttribute("title", "Activate dark Mode");
-    theme.classList.remove("bi-brightness-high-fill");
-    theme.classList.add("bi-moon-stars-fill");
-    theme.style.borderColor = "#1f1f1f";
-  } else {
-    theme.setAttribute("title", "Activate light Mode");
-    theme.classList.remove("bi-moon-stars-fill");
-    theme.classList.add("bi-brightness-high-fill");
-    theme.style.borderColor = "#fafafa";
+  if (theme !== null) {
+    if (body.classList == "light") {
+      theme.setAttribute("title", "Activate dark Mode");
+      theme.classList.remove("bi-brightness-high-fill");
+      theme.classList.add("bi-moon-stars-fill");
+      theme.style.borderColor = "#1f1f1f";
+    } else {
+      theme.setAttribute("title", "Activate light Mode");
+      theme.classList.remove("bi-moon-stars-fill");
+      theme.classList.add("bi-brightness-high-fill");
+      theme.style.borderColor = "#fafafa";
+    }
   }
 };
 
@@ -345,3 +355,18 @@ function finale() {
   textPath(text);
 }
 finale();
+
+const emailVal = () => {
+  const btn = document.getElementById("btn");
+  btn.addEventListener("click", () => {
+    const email = document.getElementById("email");
+    // storing the users email in the localStorage
+    localStorage.setItem("Email", email.value);
+  });
+};
+const returnEmail = () => {
+  // returning the email into the html structure
+  const email = localStorage.getItem("Email");
+  const success = document.querySelector(".successful .email");
+  success.textContent = `A confirmation message would be sent at ${email}`;
+};

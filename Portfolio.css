@@ -27,7 +27,6 @@
 }
 html,
 body {
-  scroll-behavior: smooth;
   background-color: var(--dark);
   color: var(--white);
 }
@@ -239,13 +238,10 @@ main > footer {
 .self > a > button::after {
   right: 0;
 }
-.self > a > button:hover::after {
-  width: 100%;
-  background-color: var(--orange);
-}
+.self > a > button:hover::after,
 .self > a > button:hover::before {
   width: 100%;
-  background-color: #ffc837;
+  background-color: var(--orange);
 }
 /* Portfolio style */
 
@@ -300,11 +296,34 @@ main > footer {
 .project-info > a:hover .bi-arrow-right {
   padding-left: 0.5em;
 }
-.project:last-child > footer {
-  padding-left: 0;
-  padding-right: 0;
+.show-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 3em;
 }
-
+.other-projects {
+  display: none;
+}
+.show-more:hover .other-projects {
+  display: grid;
+  place-items: center;
+  row-gap: 12em;
+}
+.show-more button {
+  font-size: 1.2em;
+  color: var(--white);
+  height: 3em;
+  width: 8.3em;
+  background-color: transparent !important;
+  border: 2px solid var(--white);
+  border-radius: 30px;
+  cursor: pointer;
+}
+.show-more:hover button {
+  display: none;
+}
 /* About style */
 
 .about-me {
@@ -447,23 +466,27 @@ svg {
   color: var(--orange);
   transition: 700ms;
   cursor: pointer;
+  filter: drop-shadow(0 0 10px var(--orange));
 }
 .stack > i:nth-child(2):hover {
   --css-color: #38bdf8;
   color: var(--css-color);
   transition: 700ms;
   cursor: pointer;
+  filter: drop-shadow(0 0 10px var(--css-color));
 }
 .stack > i:nth-child(3):hover {
   --js-color: #ffca28;
   color: var(--js-color);
   transition: 700ms;
   cursor: pointer;
+  filter: drop-shadow(0 0 10px var(--js-color));
 }
 .stack > svg:hover {
   background-color: #0307d6d7;
   transition: 700ms;
   cursor: pointer;
+  filter: drop-shadow(0 0 10px #3632ff);
 }
 .coding-org {
   display: flex;
@@ -638,6 +661,42 @@ form > button:hover::before {
   width: 100%;
   background-color: #ffc837;
 }
+/* FormSubmit */
+.formSubmit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 2;
+  height: 90vh;
+  padding: 0 1em;
+}
+.formSubmit .successful {
+  border: 2px solid;
+  padding: 1em;
+  width: 400px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.back {
+  margin-top: 10px;
+  margin-left: 12px;
+  display: block;
+}
+.back > .bi-chevron-left {
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 1.8em;
+  padding: 3px 7px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.bi-check-lg {
+  color: green;
+  font-size: 1.2em;
+}
 
 /* Responsive style */
 
@@ -737,6 +796,13 @@ form > button:hover::before {
 
 /* Responsiveness for 540px screen width */
 @media screen and (max-width: 540px) {
+  /* FormSubmit */
+  .formSubmit .successful {
+    width: 100%;
+  }
+  .successful > img {
+    width: 100%;
+  }
   /* Contact style */
   form {
     width: 100%;
