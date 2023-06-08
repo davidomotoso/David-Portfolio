@@ -371,6 +371,8 @@ const returnEmail = () => {
   // returning the email into the html structure
   const email = localStorage.getItem("Email");
   const successEml = document.querySelector(".email");
-  successEml.textContent = `A confirmation message would be sent at ${email}`;
+  if (successEml !== null) {
+    successEml.textContent = `A confirmation message would be sent at ${email}`;
+  }
 };
 returnEmail();
