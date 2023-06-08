@@ -666,7 +666,6 @@ form > button:hover::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 2;
   height: 90vh;
   padding: 0 1em;
 }
@@ -677,9 +676,16 @@ form > button:hover::before {
   border-radius: 10px;
   text-align: center;
   display: flex;
+  row-gap: 0.7em;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.successful .received-content {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  row-gap: 0.6em;
 }
 .back {
   margin-top: 10px;
