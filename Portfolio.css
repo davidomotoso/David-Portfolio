@@ -662,11 +662,15 @@ form > button:hover::before {
   background-color: #ffc837;
 }
 /* FormSubmit */
+.form-info {
+  height: 100vh;
+  padding: 1em;
+}
 .formSubmit {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 90vh;
+  height: 95%;
   padding: 0 1em;
 }
 .formSubmit .successful {
@@ -686,11 +690,6 @@ form > button:hover::before {
   display: grid;
   place-items: center;
   row-gap: 0.6em;
-}
-.back {
-  margin-top: 10px;
-  margin-left: 12px;
-  display: block;
 }
 .back > .bi-chevron-left {
   background-color: rgba(0, 0, 0, 0.5);
