@@ -665,6 +665,7 @@ form > button:hover::before {
 .form-info {
   height: 100vh;
   padding: 1em;
+  overflow-y: hidden;
 }
 .formSubmit {
   display: flex;
