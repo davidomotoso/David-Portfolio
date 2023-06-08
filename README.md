@@ -65,18 +65,13 @@
     </li>
   </ul>
 </div>
-<div>
   <h1>Installation</h1>
-  <ol>
-    <li>
-      Clone the repository to your local machine using the following command:
-      ```
+      1. Clone the repository to your local machine using the following command:
+      
       https://github.com/davidomotoso/David-Portfolio.git
-      ```
-    </li>
-    <li>Open the HTML file (index.html) in your preferred web browser.</li>
-  </ol>
-</div>
+  
+   2. Open the HTML file (index.html) in your preferred web browser
+
 <div>
   <h1>Usage</h1>
   <p>
