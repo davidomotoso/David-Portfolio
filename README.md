@@ -68,7 +68,7 @@
   <h1>Installation</h1>
       1. Clone the repository to your local machine using the following command:
       
-      https://github.com/davidomotoso/David-Portfolio.git
+      git clone "https://github.com/davidomotoso/David-Portfolio.git"
   
    2. Open the HTML file (index.html) in your preferred web browser
 
