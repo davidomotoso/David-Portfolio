@@ -366,7 +366,7 @@ main > footer {
 .brief-history {
   font-size: 1.2em;
   color: var(--grey);
-  overflow-y: scroll;
+  overflow-y: auto;
   padding: 0 5px 5px 0;
   width: 29em;
 }
@@ -727,13 +727,14 @@ form > button:hover::before {
     flex-direction: column;
     align-items: center;
     height: auto;
-    row-gap: 1em;
+    row-gap: 2em;
   }
   .David-img > img {
     object-fit: contain;
   }
   .brief-history {
     width: 100%;
+    padding: 0;
   }
   .freeCodeCamp-logo,
   .terra-logo,
@@ -892,9 +893,6 @@ form > button:hover::before {
   }
   .David-img {
     width: 100%;
-  }
-  .brief-history .pad-3 {
-    line-height: normal;
   }
   .coding-org > h1 {
     font-size: 2.4em;
