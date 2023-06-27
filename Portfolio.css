@@ -577,6 +577,7 @@ svg {
   height: 100%;
   width: 100%;
   object-fit: contain;
+  filter: drop-shadow(2px 0px 6px black);
 }
 .coding-org > footer {
   width: 71em;
