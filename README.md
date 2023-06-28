@@ -72,6 +72,5 @@ Thank you for visiting my portfolio! If you have any questions or would like to 
 
 <div align="center">
 <img src="img/David.png" alt="David" title="David" />
-  Contact:
-  <a href="mailto:davidomotoso45@gmail.com">My E-mail address</a>
+  <p>Contact: <a href="mailto:davidomotoso45@gmail.com">My E-mail address</a></p>
 </div>
