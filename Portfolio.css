@@ -174,12 +174,14 @@ main > footer {
 
 .intro {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 35%);
-  place-content: center;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   column-gap: 5em;
   margin: 2em 0 4em;
+}
+.self {
+  width: 32.4em;
 }
 .self > h1 {
   font-size: 2.7em;
@@ -714,6 +716,12 @@ form > button:hover::before {
     width: 100%;
   }
   /* David style */
+  .intro {
+    column-gap: 2em;
+  }
+  .self {
+    width: 25.6em;
+  }
   .self > h1 {
     font-size: 2em;
   }
@@ -757,8 +765,7 @@ form > button:hover::before {
     width: 100%;
   }
   .intro {
-    grid-template-columns: auto;
-    height: auto;
+    flex-direction: column;
     margin: 4em 0;
     padding: 0 1em;
     row-gap: 3em;
@@ -766,6 +773,7 @@ form > button:hover::before {
   .self {
     display: grid;
     place-items: center;
+    width: 100%;
   }
   .self > h1 {
     width: 100%;
