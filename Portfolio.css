@@ -53,8 +53,8 @@ nav {
   border: 2px solid var(--white);
   border-radius: 50%;
   width: 36px;
-  height: 35px;
-  padding: 1px;
+  height: 36px;
+  padding: 1.5px;
   text-align: center;
 }
 .bi-list {
@@ -858,7 +858,7 @@ form > button:hover::before {
     height: 85%;
   }
   .change-theme {
-    margin-top: 10px;
+    margin-top: 15px;
     transform: scale(0.9);
   }
   nav > ul {
@@ -883,6 +883,7 @@ form > button:hover::before {
   }
   .bi-list {
     display: block;
+    margin-top: 11px;
     cursor: pointer;
   }
   .bi-x-lg {
